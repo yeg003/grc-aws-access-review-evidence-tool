@@ -1,4 +1,4 @@
-# GRC AWS Access Review Evidence
+# GRC AWS Access Review Evidence Tool
 
 An AWS-native GRC tool that performs scheduled IAM access reviews, generates audit-ready evidence, and retains artifacts for SOC 2 and similar compliance requirements.
 
@@ -54,7 +54,7 @@ This mirrors how modern SaaS GRC teams design and operate compliance controls.
 **What it proves:**  
 The access review control is configured to run automatically on a monthly schedule.
 
-_Source: EventBridge rule_
+![Scheduled execution via EventBridge](eventbridge-schedule-proof.png)
 
 ---
 
@@ -62,15 +62,15 @@ _Source: EventBridge rule_
 **What it proves:**  
 The Lambda function has executed and produced log streams.
 
-_Source: CloudWatch log group_
+![Scheduled execution via EventBridge](cloudwatch-log-streams.png)
 
 ---
 
 ### Screenshot 3: Execution Audit Trail
 **What it proves:**  
-When the review ran, how many identities were reviewed, and where evidence was stored.
+When the review ran, how many identities were reviewed, and where the evidence was stored.
 
-_Source: CloudWatch log stream_
+![Scheduled execution via EventBridge](execution-audit-trail-cloudwatch-logs.png)
 
 ---
 
@@ -78,7 +78,7 @@ _Source: CloudWatch log stream_
 **What it proves:**  
 Monthly access review evidence is retained and retrievable for audits.
 
-_Source: Amazon S3_
+![Scheduled execution via EventBridge](evidence-retention-in-s3.png)
 
 ---
 
