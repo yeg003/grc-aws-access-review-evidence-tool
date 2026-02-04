@@ -62,6 +62,8 @@ The access review control is configured to run automatically on a monthly schedu
 **What it proves:**  
 The Lambda function has executed and produced log streams.
 
+![Scheduled execution via EventBridge](cloudwatch-log-stream.png)
+
 ---
 
 ### Screenshot 3: Execution Audit Trail
